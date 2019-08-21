@@ -4,9 +4,9 @@
 # Округление должно происходить по математическим правилам (0.6 --> 1, 0.4 --> 0).
 # Для решения задачи не используйте встроенные функции и функции из модуля math.
 
-def my_round(number, ndigits):
-    pass
-x =
+def my_round(number, digits):
+  multiplier = pow(10.0, digits)
+  return int (number*multiplier + 0.5) / multiplier
 
 print(my_round(2.1234567, 5))
 print(my_round(2.1999967, 5))
@@ -21,8 +21,5 @@ print(my_round(2.9999967, 5))
 
 def lucky_ticket(ticket_number):
     pass
+    lucky_ticket = lambda x :(lambda x : 'yes' if sum(x[:3]) == sum(x[3:]) else 'no')(map(int, list(str(x))))
 
-
-print(lucky_ticket(123006))
-print(lucky_ticket(12321))
-print(lucky_ticket(436751))
